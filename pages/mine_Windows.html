@@ -51,7 +51,7 @@
 				</li>
 				&emsp;
 				<li class="nav-item">
-					<a class="nav-link" href="http://www.nervoscommunity.com/" target="_blank">Nervos 社区</a>
+					<a class="nav-link" href="http://www.nervos.im/" target="_blank">Nervos 社区</a>
 				</li>
 			</ul>
 			<ul class="nav navbar-nav pull-right">
@@ -74,16 +74,90 @@
 		<div class="row">
 			<div class="col-sm-12 col-md-12 text-center">
 				<br>
-				<p style="font-size:20px;">Windows 挖矿教程</p>
-				<p style="font-size:20px;">Comming Soon!</p>
+				<h3>Windows 挖矿教程</h3>
+				<p>此教程适合64位 <b>Windows 10</b> 16215.0版本或者更高版本</p>
 			</div>
 		</div>
 	</div>
-	<div style="height:600px">
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-12 col-md-10 offset-md-1">
+				<h4>第一步：安装 Linux 子系统</h4>
+				<p><b>说明：</b>因为当前直接采用 Windows 挖矿的程序仍处于实验性阶段，挖矿效率较低，因此建议满足 Win10 版本需求的用户，仍通过 WSL（Windows Subsystem for Linux）的方式安装 Linux 子系统，最终实现在 CKB 上挖矿。</p>
+				<ul>
+					<li><h5>确认当前 Win10 系统版本</h5>
+						<p>通过如何<a href="http://baijiahao.baidu.com/s?id=1599865729643161638&wfr=spider&for=pc">检测 Windows 10 系统版本</a>，确认当前 64位 Win10 的系统版本号大于等于 16215.0 。</p></li>
+					<li><h5>打开 WSL 开关</h5>
+						<p>右击<b>我的电脑</b>，点击<b>属性</b>，依次进入：<b>控制面板</b> —— <b>程序</b> —— <b>启动或关闭 Windows 功能</b> —— 找到<b>“适用于 Linux 的 Windows 子系统”</b> —— 勾选前面的方框 —— 点击<b>确认</b>保存 —— 根据系统提示重启电脑。</li>
+					<li><h5>安装 Linux 子系统</h5>
+						<p>打开 Windows Store，搜索 <b>Ubuntu</b>，选择版本，点击安装，本教程选择安装的是 18.04 版本的 Ubuntu 子系统。</p>
+					</li>
+				</ul>
+			</div>
 		</div>
+	</div>
+<br>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-12 col-md-10 offset-md-1">
+				<h4>第二步：挖矿文件准备</h4>
+				<ol>
+					<li><h5>启动 Ubuntu 子系统</h5>
+					<p>进入开始菜单，点击 Ubuntu 系统，开启一个 Ubuntu 系统终端。</p></li>
+					<li><h5>下载文件</h5>
+						<p>依次根据实际情况选择地复制下面的代码，然后在 Ubuntu 终端内粘贴（右击即为粘贴），粘贴完成，按下回车，执行命令。</p>
+						<p>海外用户：</p>
+						<p><span style="background-color:lightgray">wget https://github.com/nervosnetwork/ckb/releases/download/v0.15.0/ckb_v0.15.0_x86_64-unknown-linux-gnu.tar.gz</span></p>
+						<p><span style="background-color:lightgray">wget https://github.com/nervosnetwork/ckb/releases/download/v0.15.0/ckb_v0.15.0_x86_64-unknown-linux-gnu.tar.gz.asc</span></p>
+						<p>国内镜像：</p>
+						<p><span style="background-color:lightgray">111</span></p>
+						<p><span style="background-color:lightgray">222</span></p>
+					</li>
+					<li><h5>解压文件包并创建路径</h5>
+						<p>依次复制并执行以下代码，每输入一行，点击回车键确认执行该条命令。</p>
+							<p><span style="background-color:lightgray">tar -xzvf ckb_v0.15.0_x86_64-unknown-linux-gnu.tar.gz</span></p>
+							<p><span style="background-color:lightgray">cd ckb_v0.15.0_x86_64-unknown-linux-gnu</span></p>
+							<p><span style="background-color:lightgray">sudo ln -snf "$(pwd)/ckb" /usr/local/bin/ckb</span></p>
+							<p><span style="background-color:lightgray">sudo ln -snf "$(pwd)/ckb-cli" /usr/local/bin/ckb-cli</span></p>
+					</li>
+					<li><h5>检测当前版本状态</h5></li>
+						<p>输入 <span style="background-color:lightgray">ckb --version</span> 检查 ckb 版本，确认当前版本为<span style="background-color:lightblue">111</span></p>
+						<p>输入 <span style="background-color:lightgray">ckb-cli --version</span> 检查 ckb-cli 版本，确认当前版本为<span style="background-color:lightblue">111</span></p>
+
+
+
+
+				</ol>
+			</div>
+		</div>
+	</div>
+	<br>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-12 col-md-10 offset-md-1">
+				<h4>第三步：创建钱包</h4>
+			</div>
+		</div>
+	</div>
+	<br>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-12 col-md-10 offset-md-1">
+				<h4>第四步：运行节点</h4>
+			</div>
+		</div>
+	</div>
+	<br>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-12 col-md-10 offset-md-1">
+				<h4>第五步：开始挖矿</h4>
+			</div>
+		</div>
+	</div>
 
 	<div class="container-fluid bg-primary" style="height:auto">
-		 
 		<div class="row">
 			<div class="col-xs-6 col-sm-11 col-md-2 offset-xs-6 offset-sm-1 offset-md-1">
 				<br><img src="../png/mineckb_logo.png" class="img-fluid" width="120xp">
@@ -120,10 +194,6 @@
 		</div>
 
 	</div>
-
-
-
-
 
 	<!-- 最新版本的引入插件jQuery first v-3.3.1
          then Popper.js v-1.14.6

@@ -10,8 +10,16 @@
 	<link rel="shortcut icon" type="image/x-icon" href="png/mineckb_ico.ico" />
 	<script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js"
 		data-dojo-config="usePlainJson: true, isDebug: false"></script>
-	<script
-		type="text/javascript">window.dojoRequire(["mojo/signup-forms/Loader"], function (L) { L.start({ "baseUrl": "mc.us20.list-manage.com", "uuid": "7bbd7a85bc880c9070c591346", "lid": "28ecf88e30", "uniqueMethods": true }) })</script>
+	<script type="text/javascript">
+		window.dojoRequire(["mojo/signup-forms/Loader"], function (L) {
+			L.start({
+				"baseUrl": "mc.us20.list-manage.com",
+				"uuid": "7bbd7a85bc880c9070c591346",
+				"lid": "28ecf88e30",
+				"uniqueMethods": true
+			})
+		})
+	</script>
 </head>
 
 <body>
@@ -51,7 +59,7 @@
 				</li>
 				&emsp;
 				<li class="nav-item">
-					<a class="nav-link" href="http://www.nervoscommunity.com/" target="_blank">Nervos Community</a>
+					<a class="nav-link" href="http://www.nervos.im/" target="_blank">Nervos Community</a>
 				</li>
 				&emsp;
 			</ul>
@@ -80,8 +88,8 @@
 		</div>
 	</div>
 
+
 	<div class="container-fluid bg-primary" style="height:auto">
-		 
 		<div class="row">
 			<div class="col-xs-6 col-sm-11 col-md-2 offset-xs-6 offset-sm-1 offset-md-1">
 				<br><img src="./png/mineckb_logo.png" class="img-fluid" width="120xp">
@@ -98,11 +106,10 @@
 
 				<p><a style="color:white; font-size: 120%"><b>Join Nervos Community</b></a></p>
 
-				<p><a id="community" data-toggle="popover" data-placement="right" data-original-title=""
-					href="" target="_blank" title="">WeChat</a></p>
+				<p><a id="joincommunity" data-toggle="popover" data-placement="right" data-original-title="" href=""
+						target="_blank" title="">WeChat</a></p>
 
-				<p><a id="communitytest" data-toggle="popover" data-placement="right"
-						href="" target="_blank" data-original-title="" title="">Telegram</a></p>
+				<p><a href="https://t.me/nervoscommunity" target="_blank">Telegram</a></p>
 			</div>
 		</div>
 		<div style="height:auto">
@@ -133,7 +140,13 @@
 	</script>
 	<script type="text/javascript" src="./js/bootstrap.min.js" crossorigin="anonymous"></script>
 
-
+	<script>
+		$('#joincommunity').popover({
+			trigger: 'hover', //鼠标以上时触发弹出提示框
+			html: true, //开启html 为true的话，data-content里就能放html代码了
+			content: "<img src='/png/joincommunity.png'>"
+		});
+	</script>
 
 </body>
 
